@@ -1,0 +1,648 @@
+/* Reset & Font Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --bg-color: #ffffff;
+    --card-bg: #f8f9fa;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --whatsapp-color: #25D366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+}
+.btn-secondary:hover {
+    background-color: #e2e6ea;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://placehold.co/1920x1080/2c3e50/ecf0f1?text=XyCloud+Background') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Halaman Umum */
+.page-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.page-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+/* Fitur Beranda */
+.featured-services {
+    padding: 60px 20px;
+    text-align: center;
+}
+.featured-services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.feature-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* WhatsApp Section */
+.whatsapp-section {
+    background-color: var(--light-color);
+    padding: 60px 20px;
+}
+.whatsapp-card {
+    background: var(--bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.whatsapp-card .fab.fa-whatsapp {
+    font-size: 4rem;
+    color: var(--whatsapp-color);
+    margin-right: 20px;
+}
+.whatsapp-info {
+    flex: 1;
+}
+.whatsapp-info h3 {
+    font-size: 1.5rem;
+}
+.member-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-top: 10px;
+}
+.btn-whatsapp {
+    background-color: var(--whatsapp-color);
+    color: #fff;
+    padding: 12px 25px;
+}
+.btn-whatsapp:hover {
+    background-color: #1EBE56;
+}
+
+/* Halaman Monitoring */
+.monitoring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.pc-card {
+    background: var(--bg-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.pc-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.icon-monitor {
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+.pc-card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: auto; /* Mendorong status-badge ke kanan */
+}
+.status-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+.status-in-use {
+    background-color: var(--warning-color);
+    color: var(--dark-color);
+}
+.status-online {
+    background-color: var(--success-color);
+}
+.status-offline {
+    background-color: var(--danger-color);
+}
+
+.pc-card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+.info-label {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.info-value {
+    font-weight: 600;
+}
+
+/* Halaman Toko */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: var(--bg-color);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Membuat info card tumbuh */
+}
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 10px 0;
+    margin-top: auto; /* Mendorong harga & tombol ke bawah */
+}
+.product-info .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Halaman Sewa (Pricing) */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.pricing-card {
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.pricing-card.featured {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+}
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.pricing-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.pricing-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+.pricing-features {
+    text-align: left;
+    margin: 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pricing-features .fa-check { color: var(--success-color); }
+.pricing-features .fa-times { color: var(--danger-color); }
+
+.how-to-order {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+.how-to-order h2 { margin-bottom: 15px; }
+.how-to-order ol { padding-left: 20px; }
+.how-to-order li { margin-bottom: 10px; }
+
+/* Halaman Tentang */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+.about-text h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.about-text p {
+    margin-bottom: 15px;
+}
+.admin-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.admin-list li {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.admin-list .fa-user-shield {
+    color: var(--primary-color);
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+.footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+    .hero-buttons { flex-direction: column; }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .whatsapp-card .fab.fa-whatsapp {
+        margin-right: 0;
+    }
+    .btn-whatsapp {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title { font-size: 2rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .shop-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Tambahan untuk Halaman Auth (Login/Register) --- */
+.auth-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.auth-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    margin-top: 25px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group input:disabled {
+    background: #eee;
+}
+.form-group small {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 3px;
+}
+.auth-btn {
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.auth-error {
+    color: var(--danger-color);
+    margin-top: 10px;
+    font-weight: 600;
+    display: none; /* Tampil via JS */
+}
+.auth-switch {
+    margin-top: 20px;
+}
+
+/* --- Tambahan untuk Halaman Profil --- */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+}
+.profile-avatar-section {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+.profile-info-section {
+    flex: 2;
+    min-width: 300px;
+}
+.profile-info-section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+#profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile-divider {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+.profile-info-section .btn-danger {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+.profile-info-section .btn-danger:hover {
+    background-color: #c82333;
+}
+.upload-status {
+    font-weight: 600;
+}
